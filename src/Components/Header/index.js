@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Spacer, Box, Image } from '@chakra-ui/react'
+import { Flex, Spacer, Box, Image, Heading, Center } from '@chakra-ui/react'
 import { ColorModeSwitcher } from './../../styles/ColorModeSwitcher';
 
 export function Header() {
@@ -10,9 +10,10 @@ export function Header() {
   }
   
     return (
-      <Flex pl='2' p='2' mt='0' boxShadow='sm' rounded='md'>
+      <Flex pl='2' p='2' mt='0' align='center' boxShadow='sm' rounded='md'>
           <Box  maxW='1200px'>
-           <Image maxW='100px' src={img.imgURL}/>
+           {/* <Image maxW='100px' src={img.imgURL}/> */}
+           <Heading fontSize='28'>DOGNEWS</Heading>
           </Box>
           <Spacer />
           <Box>

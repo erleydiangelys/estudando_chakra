@@ -1,7 +1,10 @@
 import React from 'react';
 
 import { Icon } from '@chakra-ui/icons'
-import { HiIdentification } from 'react-icons/hi'
+import { Dog } from '@styled-icons/boxicons-solid/Dog'
+import { EyeClose } from '@styled-icons/remix-line/EyeClose'
+import { Eye } from '@styled-icons/remix-line/Eye'
+
 import { Box, Container, Image, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
 
 // import { Container } from './styles';
@@ -26,22 +29,24 @@ function LoginForm() {
 
                     <Box p='4' mr={{ md: 4 }} boxShadow='base'>
                         <Box>
-                            <Heading as='h6' align='center' mt='5' size='ms'>Seja bem vindo ao seu portal de informação!</Heading>
+                            <Heading as='h6' align='center' mt='5' fontSize={{ base: 25, md: 30 }} maxW='25ch'>Seja bem vindo ao seu portal de informação!</Heading>
                         </Box>
 
-                        <Box display='flex' direction='row' pt='10'>
-                            <Center><Icon as={HiIdentification} color='orange.500'></Icon><Text ml='2' as='h4' size='md'>
-                                Preencha seus dados para criar conta
-                            </Text></Center>
-                        </Box>
+                        <Center>
+                            <Box display='flex' direction='row' pt='10'>
+                                <Icon as={Dog} color='orange.500' /><Text ml='2' as='h4' size='md'>
+                                    Preencha seus dados para criar conta
+                                </Text>
+                            </Box>
+                        </Center>
 
                         <Box pt='4' mt='8'>
-                            <Text size='md'>Nome</Text>
+                            <Text size='md'>nome:</Text>
                             <Input variant='outline' borderRadius='5' placeholder='ex: dogao123' />
                         </Box>
 
-                        <Box mt='6'>
-                            <Text size='md'>Senha</Text>
+                        <Box mt='8'>
+                            <Text size='md'>senha:</Text>
                             <InputGroup size='md'>
                                 <Input
                                     pr='4.5rem'
@@ -49,15 +54,15 @@ function LoginForm() {
                                     placeholder='qual será sua senha?'
                                 />
                                 <InputRightElement width='4.5rem'>
-                                    <Button h='1.75rem' size='sm' onClick={handleClick}>
-                                        {show ? 'Hide' : 'Show'}
+                                    <Button h='2rem' size='sm' bg='transparent'  onClick={handleClick}>
+                                        {show ? <Icon as={EyeClose} color='orange.500' /> : <Icon as={Eye} color='orange.500' />}
                                     </Button>
                                 </InputRightElement>
                             </InputGroup>
                         </Box>
 
-                        <Box pt='6' mt='4' mb='4' align='center'>
-                            <Button pl='8' pr='8' borderRadius='25' colorScheme='orange'>Continuar</Button>
+                        <Box pt='6' mt='8' mb='4' align='center'>
+                            <Button  borderRadius='25' minW='250px' colorScheme='orange'>Criar Conta</Button>
                         </Box>
 
                     </Box>
