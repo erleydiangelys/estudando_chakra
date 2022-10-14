@@ -10,7 +10,20 @@ const customTheme = {
         },
       }
     }
-  }
+  },
+  // styles: {
+  //   global: (props) => ({
+  //     'html, body': {
+  //       fontSize: 'sm',
+  //       background: props.colorMode === 'dark' ? 'gray.600' : 'yellow.50',
+  //       color: props.colorMode === 'dark' ? 'white' : 'black',
+  //       lineHeight: 'tall',
+  //     },
+      
+  //   }),
+  // },
+
+
 };
 
 const breakpoints = {

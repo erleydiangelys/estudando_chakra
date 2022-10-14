@@ -13,8 +13,8 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
         <Header />
-      {/* <LoginForm /> */}
-      <Cards />
+      <LoginForm />
+      {/* <Cards /> */}
 
     </ChakraProvider>
   );
