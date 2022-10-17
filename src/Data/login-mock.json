@@ -1,0 +1,45 @@
+{
+  "Users": [
+    {
+      "name": "ADM",
+      "password": "123456",
+      "privilegio": "ADM",
+      "imageUrl": "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlcm9lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "Dogs": [
+        {
+          "name": "zezo Potiguar",
+          "idade": "2 meses",
+          "imageUrl": "https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+          "likes": 200
+        }
+      ]
+    },
+    {
+      "name": "teste",
+      "password": "123456",
+      "privilegio": "COMUM",
+      "imageUrl": "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhlcm9lc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "Dogs": [
+        {
+          "name": "zezo Potiguar",
+          "idade": "2 meses",
+          "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+          "likes": 200
+        },
+        {
+          "name": "Xunina",
+          "idade": "1 Ano",
+          "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+          "likes": 1000
+        },
+        {
+          "name": "lala",
+          "idade": "1mes",
+          "imageUrl": "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+          "likes": 1000
+        }
+      ]
+    }
+  ]
+
+}

@@ -8,14 +8,15 @@
     }
   
     .swiper {
-      padding-bottom: 32px;
-      padding-top: 32px;
+      padding-bottom: 25px;
+      padding-top: 10px;
     }
   }
   
   @media only screen and (min-width: 800px) {
     .swiper {
-      padding: 32px;
+      padding: 10px;
+      padding-bottom: 25px;
     }
   }
   

@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Icon } from '@chakra-ui/icons'
+import { Icon, ExternalLinkIcon } from '@chakra-ui/icons'
 import { Dog } from '@styled-icons/boxicons-solid/Dog'
 import { EyeClose } from '@styled-icons/remix-line/EyeClose'
 import { Eye } from '@styled-icons/remix-line/Eye'
+import { FcGoogle } from 'react-icons/fc'
 
-import { Box, Container, Image, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
+import { Box, Link, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
 
 // import { Container } from './styles';
 import { Button, useMediaQuery, useColorModeValue } from '@chakra-ui/react';
@@ -27,31 +28,31 @@ function LoginForm() {
             <Center>
                 <Flex display={{ md: 'flex' }} >
 
-                    <Box p='4' mr={{ md: 4 }} boxShadow='base'>
+                    <Box p='4' borderRadius='5' mr={{ md: 4 }} boxShadow='base'>
                         <Box>
-                            <Heading as='h6' align='center' mt='5' fontSize={{ base: 25, md: 30 }} maxW='25ch'>Seja bem vindo ao seu portal de informação!</Heading>
+                            <Heading as='h6' align='center' mt='5' fontSize={{ base: 25, md: 22, lg: 28 }} maxW={{ md: '25ch' }}>Seja bem vindo ao portal do mundo Canino!</Heading>
                         </Box>
 
                         <Center>
-                            <Box display='flex' direction='row' pt='10'>
+                            <Box align='center' display='flex' direction='row' pt='10'>
                                 <Icon as={Dog} color='orange.500' /><Text ml='2' as='h4' size='md'>
-                                    Preencha seus dados para criar conta
+                                    Preencha suas credenciais para iniciarmos
                                 </Text>
                             </Box>
                         </Center>
 
                         <Box pt='4' mt='8'>
-                            <Text size='md'>nome:</Text>
-                            <Input variant='outline' borderRadius='5' placeholder='ex: dogao123' />
+                            {/* <Text size='md'>nome:</Text> */}
+                            <Input variant='outline' borderRadius='5' placeholder='Nome de usuario' />
                         </Box>
 
                         <Box mt='8'>
-                            <Text size='md'>senha:</Text>
+                            {/* <Text size='md'>senha:</Text> */}
                             <InputGroup size='md'>
                                 <Input
                                     pr='4.5rem'
                                     type={show ? 'text' : 'password'}
-                                    placeholder='qual será sua senha?'
+                                    placeholder='digite aqui sua senha'
                                 />
                                 <InputRightElement width='4.5rem'>
                                     <Button h='2rem' size='sm' bg='transparent'  onClick={handleClick}>
@@ -61,15 +62,37 @@ function LoginForm() {
                             </InputGroup>
                         </Box>
 
-                        <Box pt='6' mt='8' mb='4' align='center'>
+                        {/* <Box pt='6' mt='8' mb='4' align='center'>
                             <Button  borderRadius='25' minW='250px' colorScheme='orange'>Criar Conta</Button>
-                        </Box>
+                        </Box> */}
+
+                        <Stack mt={{sm: 10, md: 10, lg: 20 }} spacing='20px'>
+                            <Button w={'full'} borderRadius='5' colorScheme='orange'>
+                                <Center>
+                                    <Text>Login</Text>
+                                </Center>
+                            </Button>
+
+                            
+                            <Button w={'full'} borderRadius='5' variant={'outline'} leftIcon={<FcGoogle />}>
+                                <Center>
+                                    <Text>Login com Google</Text>
+                                </Center>
+                            </Button>
+
+                            <Box>
+                                <Center>
+                                    <Text>Não tem conta? <Link href='/'> crie aqui</Link></Text>
+                                </Center>
+                            </Box>
+                        </Stack>
+
 
                     </Box>
 
                     <Box color='gray.500' maxW='600px'>
-                        {isLargerThan800 ? (<Image src={img.image1Url} objectFit='cover' />)
-                            : (<Image src={img.image2Url} objectFit='cover' width='100%' maxH='250px' />)
+                        {isLargerThan800 ? (<Image borderRadius='5' src={img.image1Url} objectFit='cover' />)
+                            : (<Image borderRadius='5' src={img.image2Url} objectFit='cover' width='100%' maxH='250px' />)
                         }
 
                     </Box>

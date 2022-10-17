@@ -3,6 +3,8 @@ import { UserContext } from '../../Context/UserContext';
 
 import {
   Box,
+  LinkBox,
+  LinkOverlay,
   Flex,
   Avatar,
   HStack,
@@ -18,6 +20,7 @@ import {
   useColorModeValue,
   Stack,
   Heading,
+  Tooltip,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -28,7 +31,7 @@ export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
  
-  const Links = [{nome: 'Noticias', link: 'Noticias' }, {nome: 'Dogs', link: 'Dogs' }, {nome: 'Loja', link: 'Loja' }];
+  const Links = [{nome: 'Noticias', link: 'Noticias' }, {nome: 'Exposição', link: 'Exposicao' }, {nome: 'Loja', link: 'Loja' }];
   
   const NavLink = ({ children } ) => (
     <Link
@@ -56,13 +59,18 @@ export function Header() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box><Heading fontSize={{ md: '20'}}>DOGNEWS</Heading></Box>
+          <Tooltip hasArrow label='voltar para o inicio' fontSize='12'>
+            <LinkBox >
+            <LinkOverlay href='/'></LinkOverlay>
+            <Heading fontSize={{ md: '20'}}>DOGNEWS</Heading>
+            </LinkBox >
+          </Tooltip>
             <HStack
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map((link, index) => (
+                <NavLink key={index}>{link}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -78,7 +86,7 @@ export function Header() {
                 <Avatar
                   size={'sm'}
                   src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                    'https://i.pravatar.cc/300'
                   }
                 />
               </MenuButton>
