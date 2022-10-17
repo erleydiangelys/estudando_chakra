@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, GridItem, Box, HStack, Image, Text, VStack } from '@chakra-ui/react';
+import { Grid, GridItem, Box, Stack, LinkBox, LinkOverlay, Image, Text, Heading } from '@chakra-ui/react';
 
 function GridNews() {
   const image = {
@@ -11,13 +11,26 @@ function GridNews() {
 
   return (
     <Grid
-      h='200px'
+      h='350px'
       templateColumns='repeat(3, 1fr)'
       gap={2}
     >
-      <GridItem colSpan={{sm:3, md:1}} bg='papayawhip' />
-      <GridItem colSpan={{sm:3, md:1}} bg='papayawhip' />
-      <GridItem colSpan={{sm:3, md:1}} bg='tomato' />
+      <GridItem colSpan={{base: 3, sm:3, md:1}} bg='yellow'>
+  
+      </GridItem>
+
+      <GridItem colSpan={{base: 3, sm:3, md:2}} bg='papayawhip'>
+
+      </GridItem>
+
+      <GridItem colSpan={{base: 3, sm:3, md:2}} bg='tomato'>
+
+      </GridItem>
+
+      <GridItem colSpan={{base: 3, sm:3, md:1}} bg='tomato'>
+
+      </GridItem>
+
     </Grid>
 
 
