@@ -2,19 +2,11 @@ import React from 'react';
 import { Flex, Box, useColorModeValue, Circle, Image, Tooltip, Button, Badge, Icon, Text } from '@chakra-ui/react';
 import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOutline';
 
-const data = {
-    isNew: true,
-    imageURL:
-      'https://images.unsplash.com/photo-1625556580790-7ce9101965b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGNhbmluZSUyMHRveXxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60',
-    name: 'Almofada canina',
-    price: '54,50',
-    desciption: 'confortavel e facil de lavar',
-    estoque: 34,
-  };
 
-    function CardLoja() {
+
+    function CardLoja({data}) {
         return (
-          <Flex p={50} w="full" alignItems="center" justifyContent="center">
+          <Flex p={1}  w="full" alignItems="center" justifyContent="center">
             <Box
               bg={useColorModeValue('white', 'gray.800')}
               maxW="sm"
@@ -36,9 +28,13 @@ const data = {
                 src={data.imageURL}
                 alt={`Picture of ${data.name}`}
                 roundedTop="lg"
+                objectFit='cover'
+                // boxSize='200px'
+                w='100%'
+                h='100%'
               />
       
-              <Box p="6">
+              <Box p="4" bg={useColorModeValue('white', 'black')} roundedBottom="lg">
                 <Flex d="flex" alignItems="center" justify='space-between'>
                   <Box>
                   <Icon as={ShoppingCartOutline} h={7} w={7} alignSelf={'center'} />
@@ -52,24 +48,23 @@ const data = {
                 </Flex>
                 <Flex mt="1" justifyContent="space-between" alignContent="center">
                   <Box
-                    fontSize="xl"
+                    fontSize='md'
                     fontWeight="semibold"
                     as="h4"
-                    lineHeight="tight"
-                    isTruncated>
+                    minH={{sm: '50px', xsm:'60px', md: '60px' }}
+                    lineHeight="tight">
                     {data.name}
                   </Box>
                   
                 </Flex>
       
                 <Flex justifyContent="space-between" alignContent="center">
-                  <Text fontSize="md">{data.desciption}</Text>
+                  <Text minH='50px' fontSize="sm">{data.desciption}</Text>
                 </Flex>
-                  <Box fontSize="2xl" align='end' color={useColorModeValue('gray.800', 'white')}>
+                  <Box align='end' color={useColorModeValue('gray.800', 'white')}>
                     <Box as="span" color={'gray.600'} fontSize="lg">
-                      R$
+                    <Badge fontSize="md"> R$ {data.price}</Badge>
                     </Box>
-                    {data.price}
                   </Box>
               </Box>
             </Box>

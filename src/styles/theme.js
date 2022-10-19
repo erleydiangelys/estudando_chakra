@@ -28,6 +28,7 @@ const customTheme = {
 
 const breakpoints = {
     sm: '320px',
+    xsm:'500px',
     md: '800px',
     lg: '960px',
     xl: '1200px',

@@ -4,6 +4,7 @@ import { Icon } from '@chakra-ui/react'
 import {ExternalLink} from '@styled-icons/heroicons-solid/ExternalLink';
 import {Newspaper} from '@styled-icons/ionicons-sharp/Newspaper';
 import {Trophy} from '@styled-icons/icomoon/Trophy';
+import {Storefront} from '@styled-icons/ionicons-sharp/Storefront';
 
 import {Container, Box, Link, Center,Text, Heading, Stack, useMediaQuery} from '@chakra-ui/react'
 import CardCarrousel from '../../Components/Carrousel/CardCarrousel';
@@ -12,6 +13,7 @@ import GridMaterias from '../../Components/GridMaterias';
 
 import cards from '../../Data/dogs-mock.json'
 import CardLoja from '../../Components/CardLoja';
+import GridLoja from './../../Components/GridLoja/index';
 const CardItens = cards.Dogs
 
 function Home() {
@@ -58,11 +60,11 @@ function Home() {
         <Center>
           <Box w='100%'>   {/* parte da exposição */}
             <Box>
-              <Heading fontSize='20' m='2'>Materias <Icon w={4} as={Newspaper} /></Heading>
+              <Heading fontSize='20' m='2'>Produtos <Icon w={4} as={Storefront} /></Heading>
             </Box>
-            <CardLoja />
+            <GridLoja />
             <Box>
-              <Text m='3' align='end'>Mais Noticias,
+              <Text m='3' align='end'>Acesse nossa loja,
                 <Link href='/materias' ml='0.5' color='red' variant='ghost'>clique aqui <Icon as={ExternalLink} />
                 </Link >
               </Text>

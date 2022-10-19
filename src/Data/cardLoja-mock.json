@@ -1,0 +1,53 @@
+{
+  "Produtos": [
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTh8ZDFoUUtSRl8zY0l8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+  "name": "Fantasia: Dog abacaxi",
+  "price": "54,50",
+  "desciption": "confortavel e facil de lavar",
+  "estoque": 34
+    },
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1583513702439-2e611c58e93d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  "name": "Fantasia: Elfo natalino",
+  "price": "14,99",
+  "desciption": "Macia e duravel",
+  "estoque": 5
+    },
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1615266508040-7c47f7339963?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGRvZ3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+  "name": "Fantasia: Bad boy z",
+  "price": "54,50",
+  "desciption": "Muito estilosa e pratica",
+  "estoque": 34
+    },
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1583336663277-620dc1996580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nJTIwY2xvdGhlc3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+  "name": "Kit fantasia: Bad Boys",
+  "price": "154,50",
+  "desciption": "Um casal bem vestido e no estilo",
+  "estoque": 34
+    },
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1608097172838-f8094d967aa4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjA2fHxkb2d8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+  "name": "fantasia de natal: Rena",
+  "price": "54,50",
+  "desciption": "Fantasia de hena tematica natal",
+  "estoque": 34
+    },
+    {
+  "isNew": true,
+  "imageURL": "https://images.unsplash.com/photo-1583512603784-a8e3ea8355b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTR8ZDFoUUtSRl8zY0l8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+  "name": "Fantasia: Bananão",
+  "price": "54,50",
+  "desciption": "Roupa para sair estiloso",
+  "estoque": 34
+    }
+
+  ]
+}
