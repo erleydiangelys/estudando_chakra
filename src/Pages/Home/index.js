@@ -14,6 +14,7 @@ import GridMaterias from '../../Components/GridMaterias';
 import cards from '../../Data/dogs-mock.json'
 import CardLoja from '../../Components/CardLoja';
 import GridLoja from './../../Components/GridLoja/index';
+import GridNoticias from './../../Components/GridNoticias/index';
 const CardItens = cards.Dogs
 
 function Home() {
@@ -60,7 +61,7 @@ function Home() {
         <Center>
           <Box w='100%'>   {/* parte da exposição */}
             <Box>
-              <Heading fontSize='20' m='2'>Produtos <Icon w={4} as={Storefront} /></Heading>
+              <Heading fontSize='20' m='2'>Produtos a venda <Icon w={4} as={Storefront} /></Heading>
             </Box>
             <GridLoja />
             <Box>
@@ -71,6 +72,24 @@ function Home() {
             </Box>
           </Box>
         </Center>
+
+
+        <Center>
+          <Box w='100%'>   {/* parte da exposição */}
+            <Box>
+              <Heading fontSize='20' m='2'>Noticias <Icon w={4} as={Storefront} /></Heading>
+            </Box>
+            <GridNoticias />
+            <Box>
+              <Text m='3' align='end'>Mais noticias,
+                <Link href='/materias' ml='0.5' color='red' variant='ghost'>clique aqui <Icon as={ExternalLink} />
+                </Link >
+              </Text>
+            </Box>
+          </Box>
+        </Center>
+
+
 
       </Stack>
 

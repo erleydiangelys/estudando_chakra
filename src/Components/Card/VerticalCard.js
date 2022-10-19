@@ -1,3 +1,5 @@
+//usado no feed exposição
+
 import React from 'react';
 import { Flex, Box, VStack, HStack, Tag, Badge, Image, Text, Heading, useColorModeValue } from '@chakra-ui/react';
 
