@@ -31,7 +31,7 @@ export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
  
-  const Links = [{nome: 'Noticias', link: 'Noticias' }, {nome: 'Exposição', link: 'Exposicao' }, {nome: 'Loja', link: 'Loja' }];
+  const Links = [{nome: 'Noticias', link: 'noticias' }, {nome: 'Exposição', link: 'exposicao' }, {nome: 'Loja', link: 'loja' }];
   
   const NavLink = ({ children } ) => (
     <Link
