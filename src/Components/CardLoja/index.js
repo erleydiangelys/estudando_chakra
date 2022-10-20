@@ -1,11 +1,16 @@
 import React from 'react';
-import { Flex, Box, useColorModeValue, Circle, Image, Tooltip, Button, Badge, Icon, Text } from '@chakra-ui/react';
+import { Flex, Box, useColorModeValue, Tag, Circle, Image, useDisclosure, Button, Badge, Icon, Text, Modal, ModalFooter, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, } from '@chakra-ui/react';
+
 import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOutline';
+import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
 
 
 
     function CardLoja({data}) {
+      const { isOpen, onOpen, onClose } = useDisclosure()
+
         return (
+          <>
           <Flex p={1}  w="full" alignItems="center" justifyContent="center">
             <Box
               bg={useColorModeValue('white', 'gray.800')}
@@ -23,7 +28,11 @@ import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOu
                   bg="green.200"
                 />
               )}
-      
+
+                <Tag position="absolute" size="10px" p='1' top={2} left={2}  rounded="full" borderRadius='8px' bgColor='white.50' onClick={onOpen}>
+                  <Icon as={ResizeFullScreen} color='black' w='2 ' h='2' />
+                </Tag>
+
               <Image
                 src={data.imageURL}
                 alt={`Picture of ${data.name}`}
@@ -32,6 +41,7 @@ import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOu
                 // boxSize='200px'
                 w='100%'
                 h='100%'
+                onClick={onOpen} 
               />
       
               <Box p="4" bg={useColorModeValue('white', 'black')} roundedBottom="lg">
@@ -69,6 +79,27 @@ import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOu
               </Box>
             </Box>
           </Flex>
+
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>
+                  <Badge colorScheme='blue' mr='2'>{data.name}</Badge>
+                  <Badge colorScheme='orange' mr='2'>{data.price}</Badge>
+                  {/* <Badge colorScheme='whatsapp' mr='2'>{raca}</Badge> */}
+                </ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Image src={data.imageURL} />
+                </ModalBody>
+
+                <ModalFooter>
+                  {/* <Tag variant='solid' colorScheme='red' ><Icon as={HeartFill} mr='2' /> {likes}</Tag> */}
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </>
+
         );
       }
       

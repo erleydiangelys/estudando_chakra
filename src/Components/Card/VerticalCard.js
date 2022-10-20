@@ -17,7 +17,7 @@ function VerticalCard({card}) {
   return(
     <>
       <Flex direction='column' position="relative" maxW='450px' maxH='500px' borderRadius='8px' bgColor={useColorModeValue('gray.100', 'black')} m='1'>
-          <Tag  position="absolute" right='1' top='1' rounded="full" borderRadius='8px' bgColor='white.50'>
+          <Tag  position="absolute" size="10px" p='1' right='1' top='1' rounded="full" borderRadius='8px' bgColor='white.50'  onClick={onOpen}>
           <Icon as={ResizeFullScreen} color='black' w='3 ' h='3'/>
           </Tag>
           

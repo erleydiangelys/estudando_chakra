@@ -90,7 +90,7 @@ export function Header() {
                   }
                 />
               </MenuButton>
-              <MenuList>
+              <MenuList zIndex='999'>
                 <MenuItem>Perfil</MenuItem>
                 <MenuItem>Meus Dogs</MenuItem>
                 {/* <MenuDivider /> */}
