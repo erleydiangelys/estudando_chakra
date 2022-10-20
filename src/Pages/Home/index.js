@@ -25,7 +25,9 @@ function Home() {
 
       <Stack spacing='10px'>
 
-        <Center>
+
+    
+      <Center>
           <Box w='100%'>   {/* parte da exposição */}
           <Box>
               <Heading fontSize='20' m='2'>Feed da Exposição <Icon w={4} as={Trophy} /></Heading>
@@ -41,25 +43,9 @@ function Home() {
           </Box>
         </Center>
 
-
+      
         <Center>
-          <Box w='100%'>   {/* parte da exposição */}
-            <Box>
-              <Heading fontSize='20' m='2'>Materias <Icon w={4} as={Newspaper} /></Heading>
-            </Box>
-            <GridMaterias />
-            <Box>
-              <Text m='3' align='end'>Mais Noticias,
-                <Link href='/materias' ml='0.5' color='red' variant='ghost'>clique aqui <Icon as={ExternalLink} />
-                </Link >
-              </Text>
-            </Box>
-          </Box>
-        </Center>
-
-
-        <Center>
-          <Box w='100%'>   {/* parte da exposição */}
+          <Box w='100%'>   {/* parte da venda */}
             <Box>
               <Heading fontSize='20' m='2'>Produtos a venda <Icon w={4} as={Storefront} /></Heading>
             </Box>
@@ -74,14 +60,33 @@ function Home() {
         </Center>
 
 
-        <Center>
-          <Box w='100%'>   {/* parte da exposição */}
+        
+      <Center>
+          <Box w='100%'>   {/* parte das noticias */}
             <Box>
               <Heading fontSize='20' m='2'>Noticias <Icon w={4} as={Storefront} /></Heading>
             </Box>
             <GridNoticias />
             <Box>
               <Text m='3' align='end'>Mais noticias,
+                <Link href='/materias' ml='0.5' color='red' variant='ghost'>clique aqui <Icon as={ExternalLink} />
+                </Link >
+              </Text>
+            </Box>
+          </Box>
+        </Center>
+
+
+
+
+        <Center>
+          <Box w='100%'>   {/* parte da materias */}
+            <Box>
+              <Heading fontSize='20' m='2'>Materias <Icon w={4} as={Newspaper} /></Heading>
+            </Box>
+            <GridMaterias />
+            <Box>
+              <Text m='3' align='end'>Mais Materias,
                 <Link href='/materias' ml='0.5' color='red' variant='ghost'>clique aqui <Icon as={ExternalLink} />
                 </Link >
               </Text>

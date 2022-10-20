@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, GridItem, Box, LinkBox, useColorModeValue, Flex, Image, Text, Heading } from '@chakra-ui/react';
+import { Grid, GridItem, Box, Link, useColorModeValue, Badge, Image, Text, Heading } from '@chakra-ui/react';
 
 function GridMaterias() {
   const image = {
@@ -16,37 +16,49 @@ function GridMaterias() {
   }
 
 
-  return ( // depois quero fazer o texto flutuar sobre a imagem ainda nao ta assim
+  return (
     <Grid
       templateColumns='repeat(3, 1fr)'
       gap={2}
     >
       <GridItem colSpan={{ base: 3, sm: 3, md: 1 }} maxH={{ base: '150px', sm: '150px', md: '200px' }} position="relative">
-        <Image src={image.url1} width='100%' height='100%' objectFit='cover' borderRadius='5' />
-        <Box justify={'center'} position="absolute" bottom='1'  w='100%'>
-          <Text bgColor={useColorModeValue('gray.100', 'blue.900')} fontWeight='600' fontSize='14' align='center'>{image.texto1}</Text>
-        </Box>
+        <Link href='#'>
+          <Badge position="absolute" right='1' top='1'>click para ler +</Badge>
+          <Image src={image.url1} width='100%' height='100%' objectFit='cover' borderRadius='5' />
+          <Box justify={'center'} position="absolute" bottom='0' w='100%'>
+            <Text fontFamily='Montserrat' p='1' borderBottomRadius='5' bgColor={useColorModeValue('red.300', 'red.900')} fontWeight='600' fontSize='14' align='center'>{image.texto1}</Text>
+          </Box>
+        </Link>
       </GridItem>
 
       <GridItem colSpan={{ base: 3, sm: 3, md: 2 }} maxH={{ base: '150px', sm: '150px', md: '200px' }} position="relative">
-        <Image src={image.url2} width='100%' height='100%' objectFit='cover' borderRadius='5' />
-        <Box justify={'center'} position="absolute" bottom='1'  w='100%'>
-          <Text bgColor={useColorModeValue('gray.100', 'blue.900')} fontWeight='600' fontSize='14' align='center'>{image.texto2}</Text>
-        </Box>
+        <Link href='#'>
+          <Badge position="absolute" right='1' top='1'>click para ler +</Badge>
+          <Image src={image.url2} width='100%' height='100%' objectFit='cover' borderRadius='5' />
+          <Box justify={'center'} position="absolute" bottom='0' w='100%'>
+            <Text p='1' borderBottomRadius='5' bgColor={useColorModeValue('green.100', 'green.900')} fontWeight='600' fontSize='14' align='center'>{image.texto2}</Text>
+          </Box>
+        </Link>
       </GridItem>
 
-      <GridItem colSpan={{ base: 3, sm: 3, md: 2 }} maxH={{ base: '150px', sm: '150px', md: '200px' }}position="relative">
-        <Image src={image.url3} width='100%' height='100%' objectFit='cover' borderRadius='5' />
-        <Box justify={'center'} position="absolute" bottom='1'  w='100%'>
-          <Text bgColor={useColorModeValue('gray.100', 'blue.900')} fontWeight='600' fontSize='14' align='center'>{image.texto3}</Text>
-        </Box>
+      <GridItem colSpan={{ base: 3, sm: 3, md: 2 }} maxH={{ base: '150px', sm: '150px', md: '200px' }} position="relative">
+        <Link href='#'>
+          <Badge position="absolute" right='1' top='1'>click para ler +</Badge>
+          <Image src={image.url3} width='100%' height='100%' objectFit='cover' borderRadius='5' />
+          <Box justify={'center'} position="absolute" bottom='0' w='100%'>
+            <Text p='1' borderBottomRadius='5' bgColor={useColorModeValue('blue.100', 'blue.900')} fontWeight='600' fontSize='14' align='center'>{image.texto3}</Text>
+          </Box>
+        </Link>
       </GridItem>
 
-      <GridItem colSpan={{ base: 3, sm: 3, md: 1 }} maxH={{ base: '150px', sm: '150px', md: '200px' }}position="relative">
-        <Image src={image.url4} width='100%' height='100%' objectFit='cover' borderRadius='5' />
-        <Box justify={'center'} position="absolute" bottom='1'  w='100%'>
-          <Text bgColor={useColorModeValue('gray.100', 'blue.900')} fontWeight='600' fontSize='14' align='center'>{image.texto4}</Text>
-        </Box>
+      <GridItem colSpan={{ base: 3, sm: 3, md: 1 }} maxH={{ base: '150px', sm: '150px', md: '200px' }} position="relative">
+        <Link href='#'>
+          <Badge position="absolute" right='1' top='1'>click para ler +</Badge>
+          <Image src={image.url4} width='100%' height='100%' objectFit='cover' borderRadius='5' />
+          <Box justify={'center'} position="absolute" bottom='0' w='100%'>
+            <Text p='1' borderBottomRadius='5' bgColor={useColorModeValue('yellow.100', 'yellow.900')} fontWeight='600' fontSize='14' align='center'>{image.texto4}</Text>
+          </Box>
+        </Link>
       </GridItem>
     </Grid>
 
