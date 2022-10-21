@@ -6,16 +6,21 @@ import { EyeClose } from '@styled-icons/remix-line/EyeClose'
 import { Eye } from '@styled-icons/remix-line/Eye'
 import { FcGoogle } from 'react-icons/fc'
 
-import { Box, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
+import { useToast, Box, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
 
 // import { Container } from './styles';
 import { Button, useMediaQuery, useColorModeValue } from '@chakra-ui/react';
 
 function LoginCadastro() {
 
+    function handleSubmit(){
+
+    }
+
     const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
+    const toast = useToast()
 
     const img = {
         image1Url: 'https://images.unsplash.com/photo-1529088363398-8efc64a0eb95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=492&q=80',
@@ -81,8 +86,16 @@ function LoginCadastro() {
                         </Box>
 
 
-                        <Stack mt={{sm: 10, md: 10, lg: 20 }} spacing='20px'>
-                            <Button w={'full'} borderRadius='5' colorScheme='orange'>
+                        <Stack mt={{ sm: 10, md: 10, lg: 20 }} spacing='20px'>
+                            <Button w={'full'} borderRadius='5' colorScheme='orange' onClick={() =>
+                                toast({
+                                    title: 'Função não disponivel',
+                                    description: "Devido o caracter de exibição desse projeto essa função nao foi implementada ainda",
+                                    status: 'warning',
+                                    duration: 9000,
+                                    isClosable: true,
+                                })
+                            }>
                                 <Center>
                                     <Text>Criar Conta</Text>
                                 </Center>

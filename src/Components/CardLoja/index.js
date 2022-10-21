@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, Box, useColorModeValue, Tag, Circle, Image, useDisclosure, Button, Badge, Icon, Text, Modal, ModalFooter, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, } from '@chakra-ui/react';
+import { UserContext } from '../../Context/UserContext';
+import { useToast,  Flex, Box, useColorModeValue, Tag, Circle, Image, useDisclosure, Button, Badge, Icon, Text, Modal, ModalFooter, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, } from '@chakra-ui/react';
 
 import {ShoppingCartOutline} from '@styled-icons/evaicons-outline/ShoppingCartOutline';
 import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
@@ -7,7 +8,32 @@ import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
 
 
     function CardLoja({data}) {
+      const { login, itensCarrinho, setItensCarrinho, descCarrinho, setDescCarrinho } = React.useContext(UserContext);
       const { isOpen, onOpen, onClose } = useDisclosure()
+      const [DesCar, setDesCar] = React.useState([])
+      const toast = useToast()
+
+      React.useEffect(() => { 
+        setDesCar(descCarrinho)
+      }, [descCarrinho]); 
+
+    
+      // nao ta adicionando ao arrey
+      let dados = []
+      function addCart(){
+        
+        descCarrinho.push(data)
+        setItensCarrinho(itensCarrinho + 1)
+        toast({
+          title: 'Produto Adicionado',
+          description: `Produto ${data.name} adicionado ao carrinho`,
+          status: 'success',
+          position: 'top-right',
+          duration: 9000,
+          isClosable: true,
+      })
+    } 
+
 
         return (
           <>
@@ -54,7 +80,9 @@ import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
                     </Badge>
                   )}
                   </Box>
-                  <Button p='2' rightIcon={<Icon as={ShoppingCartOutline}/>} colorScheme='green' variant='outline'>+</Button>
+                  <Button p='2' rightIcon={<Icon as={ShoppingCartOutline}/>} colorScheme='green' variant='outline' onClick={addCart}>
+                    +
+                    </Button>
                 </Flex>
                 <Flex mt="1" justifyContent="space-between" alignContent="center">
                   <Box
