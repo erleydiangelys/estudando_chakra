@@ -1,6 +1,9 @@
 ideia fazer um site de noticias so que todo ambientado em cachorros 
 
 
+
+
+
 https://www.youtube.com/watch?v=RjZOUCIwo4M&t=11s
 
 https://www.youtube.com/watch?v=pprhZbiZ4FE (com motion)

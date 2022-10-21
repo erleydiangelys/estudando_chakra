@@ -6,6 +6,8 @@ import Home from './Pages/Home';
 import Loja from './Pages/Loja';
 import Noticias from './Pages/Noticias';
 import Noticia from './Components/Noticia';
+import Exposicao from './Pages/Exposicao/index';
+import Teste from './Pages/Teste/index';
 
 export const Router = () => {
   return(
@@ -14,9 +16,11 @@ export const Router = () => {
       <Route path="login/" element={<LoginForm/>} />
       <Route path="login/create" element={<LoginCadastro/>} />
       <Route path="loja/" element={<Loja />} />
+      <Route path="exposicao/" element={<Exposicao /> } />
       <Route path="noticias/" element={<Noticias />} />
       <Route path="noticias/:id" element={<Noticia />} />
       <Route path="*" />
+      <Route path="teste/" element={<Teste />} />
     </Routes>
 )
 }

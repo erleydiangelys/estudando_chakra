@@ -6,10 +6,9 @@ import { EyeClose } from '@styled-icons/remix-line/EyeClose'
 import { Eye } from '@styled-icons/remix-line/Eye'
 import { FcGoogle } from 'react-icons/fc'
 
-import { Box, Link, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
+import { Button, useMediaQuery, useColorModeValue, Box, Link, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
 
-// import { Container } from './styles';
-import { Button, useMediaQuery, useColorModeValue } from '@chakra-ui/react';
+
 
 function LoginForm() {
 
@@ -62,9 +61,6 @@ function LoginForm() {
                             </InputGroup>
                         </Box>
 
-                        {/* <Box pt='6' mt='8' mb='4' align='center'>
-                            <Button  borderRadius='25' minW='250px' colorScheme='orange'>Criar Conta</Button>
-                        </Box> */}
 
                         <Stack mt={{sm: 10, md: 10, lg: 20 }} spacing='20px'>
                             <Button w={'full'} borderRadius='5' colorScheme='orange'>

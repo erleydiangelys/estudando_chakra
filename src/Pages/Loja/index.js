@@ -1,41 +1,37 @@
 import React from 'react';
-import Contas from '../../Data/contas-mock.json'
-import { Container, TableContainer, Table, Thead, Tr, Td, Th, Tbody, Center, Stack } from '@chakra-ui/react'
+import { Container,Heading, Icon, Box, Grid,  Center, Stack, Text, Link } from '@chakra-ui/react'
 
-const data = Contas['Contas']
-const dataHead = Object.keys(data[0])
+import {Storefront} from '@styled-icons/ionicons-sharp/Storefront';
+
+import produtos from '../../Data/cardLoja-mock.json'
+import CardLoja from './../../Components/CardLoja/index';
+const data = produtos.Produtos
 
 function Loja() {
   return (
-    <Container maxW='1200px' mt='10'>
-      {console.log(dataHead)}
-      <Stack>
-        <Center>
+    <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
 
-          <TableContainer>
-            <Table variant='simple'>
-              <Thead>
-              {dataHead.map((item, index) => (
-                  <Tr key={index}>
-                    <Th key={index}>{item}</Th>
-                </Tr>
-                ))}
-              </Thead>
-              <Tbody>
-                {data.map((item, index) => (
-                  <Tr key={index}>
-                    <Td key={index}>{item.Cliente}</Td>
-                    <Td>{item.Valor}</Td>
-                    <Td>{item.juros}</Td>
-                </Tr>
-                ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
+    <Stack spacing='10px'>
 
-        </Center>
-      </Stack>
-    </Container>
+    <Center>
+        <Box w='100%'>   {/* parte da exposição */}
+        <Box>
+            <Heading fontSize='20' m='2' align='center' mb='5'>Loja<Icon w={4} as={Storefront} ml='2' /></Heading>
+          </Box>
+        <Grid templateColumns={{sm: 'repeat(1, 1fr)', xsm:'repeat(2, 1fr)', md: 'repeat(3, 1fr)', }} gap='5' m='2'>           
+        {data.map((card, index) => (
+          <CardLoja key={index} data={card} />
+        ))}
+        </Grid>
+
+          <Box>
+        </Box>
+        </Box>
+      </Center>
+
+    </Stack>
+
+  </Container>
   );
 }
 

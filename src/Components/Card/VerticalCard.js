@@ -1,16 +1,17 @@
 //usado no feed exposição
 
 import React from 'react';
-import { Flex, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Button, ModalFooter, Box, VStack, HStack, Tag, Badge, Image, Text, Heading, useColorModeValue, useDisclosure } from '@chakra-ui/react';
+import { Flex, Grid, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Button, ModalFooter, Box, VStack, HStack, Tag, Badge, Image, Text, Heading, useColorModeValue, useDisclosure } from '@chakra-ui/react';
 
 import { Icon } from '@chakra-ui/react'
 import {HeartFill} from '@styled-icons/bootstrap/HeartFill';
 import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
 import { customScrollbar } from './../../styles/utils';
+import {CheckCircle} from '@styled-icons/boxicons-solid/CheckCircle';
 
 const text = 'Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.'
 
-function VerticalCard({card}) {
+function VerticalCard({card, isVotar = true}) {
    const {imageUrl, idade, name, sobre, likes, raca } = card
    const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -37,9 +38,10 @@ function VerticalCard({card}) {
 
               <Text overflow='auto' css={customScrollbar}>{sobre}</Text>
 
-          <Box>
+          <Grid templateColumns='repeat(2, 1fr)' gap='2'>
               <Tag variant='solid' colorScheme='red' ><Icon as={HeartFill} mr='2'/> {likes}</Tag>
-          </Box>
+              {isVotar && <Button align='center' leftIcon={<Icon as={CheckCircle}/>} size='sm' colorScheme='teal' variant='solid'>votar</Button>}
+          </Grid>
           </VStack>
 
       </Flex>

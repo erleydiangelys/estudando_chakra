@@ -1,23 +1,19 @@
 import React from 'react'
 import { UserContext } from '../../Context/UserContext';
+import { Link as ReactLink } from "react-router-dom";
 
 import {
   Box,
-  LinkBox,
-  LinkOverlay,
   Flex,
   Avatar,
   HStack,
-  Link,
   IconButton,
   Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
   Stack,
   Heading,
   Tooltip,
@@ -34,17 +30,10 @@ export function Header() {
   const Links = [{nome: 'Noticias', link: 'noticias' }, {nome: 'Exposição', link: 'exposicao' }, {nome: 'Loja', link: 'loja' }];
   
   const NavLink = ({ children } ) => (
-    <Link
-      px={2}
-      py={1}
-      rounded={'md'}
-      _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
-      }}
-      href={children.link}>
+    <ReactLink //tive que mudar para o link do react 
+      to={children.link}>
       {children.nome}
-    </Link>
+    </ReactLink>
   );
 
   return (
@@ -60,10 +49,9 @@ export function Header() {
           />
           <HStack spacing={8} alignItems={'center'}>
           <Tooltip hasArrow label='voltar para o inicio' fontSize='12'>
-            <LinkBox >
-            <LinkOverlay href='/'></LinkOverlay>
+            <ReactLink to='/' >
             <Heading fontSize={{ md: '20'}}>DOGNEWS</Heading>
-            </LinkBox >
+            </ReactLink >
           </Tooltip>
             <HStack
               as={'nav'}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Link as ReactLink } from "react-router-dom";
 import { LoremIpsum } from 'react-lorem-ipsum';
 
 import { Container, Hide , Breadcrumb, BreadcrumbItem, BreadcrumbLink, Box, Grid, GridItem, Image, Heading, Text, Badge } from '@chakra-ui/react';
@@ -16,11 +16,11 @@ function Noticia() {
     {/* <Hide  above ='md'> */}
           <Breadcrumb mb='3'>
               <BreadcrumbItem>
-                  <BreadcrumbLink href='/'>Inicio</BreadcrumbLink>
+                  <ReactLink to='/'>Inicio</ReactLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem>
-                  <BreadcrumbLink href='/noticias'>noticias</BreadcrumbLink>
+                  <ReactLink to='/noticias'>noticias</ReactLink>
               </BreadcrumbItem>
           </Breadcrumb>
     {/* </Hide > */}
