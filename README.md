@@ -1,6 +1,7 @@
 ideia fazer um site de noticias so que todo ambientado em cachorros 
 
 
+ajustar o botao de votar
 
 
 

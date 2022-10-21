@@ -92,7 +92,7 @@ export function Header() {
                     <Text color='red'>{itens}</Text>
                   </Flex>) : (<Icon mr='4' w='6' h='6' as={ShoppingCartOutline} />)}
               </MenuButton>
-              <MenuList zIndex='2'>
+              {descItens.length > 0 && <MenuList zIndex='2'>
                 {descItens.length > 0 && descItens.map((item, index) => (
                   <MenuItem key={index} maxW='300px'>
                     <Flex>
@@ -107,7 +107,7 @@ export function Header() {
                     Finalizar compra
                   </Button>
                 </Center>}
-              </MenuList>
+              </MenuList>}
             </Menu>
 
             <Menu>
