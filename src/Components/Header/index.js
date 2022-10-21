@@ -92,19 +92,21 @@ export function Header() {
                     <Text color='red'>{itens}</Text>
                   </Flex>) : (<Icon mr='4' w='6' h='6' as={ShoppingCartOutline} />)}
               </MenuButton>
-              <MenuList zIndex='999'>
+              <MenuList zIndex='2'>
                 {descItens.length > 0 && descItens.map((item, index) => (
-                  <MenuItem key={index}>
-                    <Image maxW='80px' src={item.imageURL} /><Text >Produto: {item.name} Preço: {item.price}</Text>
-                    {console.log(item)}
+                  <MenuItem key={index} maxW='300px'>
+                    <Flex>
+                    <Image maxW='80px' src={item.imageURL} />
+                    <Text >Produto: {item.name} Preço: {item.price}</Text>
+                    </Flex>
                   </MenuItem>
                 ))}
-                <Center>
+                {descItens.length > 0 && <Center>
                   <Button colorScheme='orange' onClick={() =>
-                  toast({ title: 'Função não disponivel', description: "Devido o caracter de exibição desse projeto essa função nao foi implementada ainda", status: 'warning', duration: 9000, isClosable: true })}>
+                  toast({ title: 'Função não disponivel', description: "Devido o caracter de exibição desse projeto essa função nao foi implementada ainda", status: 'warning', duration: 9000, isClosable: true, size: '300', })}>
                     Finalizar compra
                   </Button>
-                </Center>
+                </Center>}
               </MenuList>
             </Menu>
 

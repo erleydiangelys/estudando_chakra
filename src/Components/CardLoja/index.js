@@ -31,6 +31,7 @@ import {ResizeFullScreen} from '@styled-icons/entypo/ResizeFullScreen';
           position: 'top-right',
           duration: 9000,
           isClosable: true,
+          size: '300',
       })
     } 
 
