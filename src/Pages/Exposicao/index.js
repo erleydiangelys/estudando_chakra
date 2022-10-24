@@ -79,13 +79,6 @@ function Exposicao() {
             <Heading fontSize='16' mt='10' align='start'>Vote<Icon w={3} as={CheckCircle} ml='1' /></Heading>
 
             {CardItens && <CardCarrousel qtdSlide={isLargerThan320 ? (isLargerThan800 ? 3 : 2) : 1} card={CardItens} />}
-            <Box>
-              <Text mb='3' align='end'>Mais na Exposição,
-                <Link href='/exposicao' ml='0.5' color='red' variant='ghost'>
-                  venha Conferir <Icon as={ExternalLink} />
-                </Link >
-              </Text>
-            </Box>
           </Box>
 
         </Center>

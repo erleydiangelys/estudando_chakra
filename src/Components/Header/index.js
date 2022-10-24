@@ -41,7 +41,7 @@ export function Header() {
     setDescItens(descCarrinho)
   }, [itensCarrinho, descCarrinho]);
 
-  const Links = [{ nome: 'Noticias', link: 'noticias' }, { nome: 'Exposição', link: 'exposicao' }, { nome: 'Loja', link: 'loja' }];
+  const Links = [{ nome: 'Noticias', link: 'noticias' }, { nome: 'Exposição', link: 'exposicao' },  { nome: 'Materias', link: 'materias' }, { nome: 'Loja', link: 'loja' }];
 
   const NavLink = ({ children }) => (
     <ReactLink //tive que mudar para o link do react 
