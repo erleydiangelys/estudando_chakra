@@ -52,7 +52,8 @@ export function Header() {
 
   return (
     <>
-      <Box px={4}>
+      {login && 
+      (<Box px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -142,7 +143,8 @@ export function Header() {
             </Stack>
           </Box>
         ) : null}
-      </Box>
+      </Box>)
+}
     </>
   );
 }

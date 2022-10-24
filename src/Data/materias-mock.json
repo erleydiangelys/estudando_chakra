@@ -1,0 +1,37 @@
+{
+  "Materias": [
+    {
+      "id": 1,
+      "autor": "Zezo potiguar",
+      "dataPost": "20/10/2022",
+      "title": "Levar o dog na viagem, fará dele mais sociavel",
+      "imgURL": "https://images.unsplash.com/photo-1518155317743-a8ff43ea6a5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGRvZyUyMHZldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "resumo": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas enim. Donec rhoncus ac est ultricies convallis. Duis vitae interdum ipsum. Pellentesque sit amet sodales est, sed porta lorem. Pellentesque sed scelerisque dolor. Donec luctus elementum consectetur. Ut vel leo nisi. Praesent in tristique tellus. Donec sagittis, urna at hendrerit blandit..."
+    },
+    {
+      "id": 2,
+      "autor": "Zezo potiguar",
+      "dataPost": "19/10/2022",
+      "title": "Forte onda de frio tem afetado seu cão? o que fazer!",
+      "imgURL": "https://images.unsplash.com/photo-1453227588063-bb302b62f50b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRvZyUyMHZldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "resumo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas enim. Donec rhoncus ac est ultricies convallis. Duis vitae interdum ipsum. Pellentesque sit amet sodales est, sed porta lorem. Pellentesque sed scelerisque dolor. Donec luctus elementum consectetur. Ut vel leo nisi. Praesent in tristique tellus. Donec sagittis, urna at hendrerit blandit..."
+    },
+    {
+      "id": 3,
+      "autor": "Zezo potiguar",
+      "dataPost": "19/10/2022",
+      "title": "Os beneficios do banho regular para a saúde do seu dog",
+      "imgURL": "https://images.unsplash.com/photo-1611173622933-91942d394b04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHZldGVyaW5hcmlhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "resumo": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas enim. Donec rhoncus ac est ultricies convallis. Duis vitae interdum ipsum. Pellentesque sit amet sodales est, sed porta lorem. Pellentesque sed scelerisque dolor. Donec luctus elementum consectetur. Ut vel leo nisi. Praesent in tristique tellus. Donec sagittis, urna at hendrerit blandit..."
+    },
+    {
+      "id": 4,
+      "autor": "Zezo potiguar",
+      "dataPost": "19/10/2022",
+      "title": "Sempre o melhor amigo!",
+      "imgURL": "https://images.unsplash.com/photo-1508675801627-066ac4346a61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTF8fGRvZyUyMHZldHxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
+      "resumo": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at egestas enim. Donec rhoncus ac est ultricies convallis. Duis vitae interdum ipsum. Pellentesque sit amet sodales est, sed porta lorem. Pellentesque sed scelerisque dolor. Donec luctus elementum consectetur. Ut vel leo nisi. Praesent in tristique tellus. Donec sagittis, urna at hendrerit blandit..."
+    }
+  ]
+
+}

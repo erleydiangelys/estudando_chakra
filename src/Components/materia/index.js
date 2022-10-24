@@ -4,23 +4,24 @@ import { LoremIpsum } from 'react-lorem-ipsum';
 
 import { Container, Hide , Breadcrumb, BreadcrumbItem, BreadcrumbLink, Box, Grid, GridItem, Image, Heading, Text, Badge } from '@chakra-ui/react';
 
-import noticias from '../../Data/noticias-mock.json'
+import materias from '../../Data/materias-mock.json'
 
-function Noticia() {
+function Materia() {
     let { id } = useParams();
-    const data = noticias.Noticias[id - 1]
+    const data = materias.Materias[id - 1]
 
   return (
     <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
 
     {/* <Hide  above ='md'> */}
+          {console.log(data)}
           <Breadcrumb mb='3'>
               <BreadcrumbItem>
                   <ReactLink to='/'>Inicio</ReactLink>
               </BreadcrumbItem>
 
               <BreadcrumbItem>
-                  <ReactLink to='/noticias'>noticias</ReactLink>
+                  <ReactLink to='/materias'>materias</ReactLink>
               </BreadcrumbItem>
           </Breadcrumb>
     {/* </Hide > */}
@@ -45,4 +46,4 @@ function Noticia() {
   );
 }
 
-export default Noticia;
+export default Materia;

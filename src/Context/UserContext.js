@@ -15,18 +15,20 @@ export const UserDataContext = ({ children }) => {
   function Userlogin(name, senha) {
     setLoading(true);
     if((name === 'adm') && (senha === '123')) {
-      setLoading(false);
-      navigate('/');
+      setLogin(true)
+      setLoading(false)
+      navigate('/')
     }
     else {
       setError('usuario ou senha invalido')
-      setLoading(false);
+      setLoading(false)
+      setLogin(false)
     }
   }
 
     return (
         <UserContext.Provider
-          value={{ login, loading, error, Userlogin, itensCarrinho, setItensCarrinho, descCarrinho, setDescCarrinho }}
+          value={{ login, setLogin, loading, error, Userlogin, itensCarrinho, setItensCarrinho, descCarrinho, setDescCarrinho }}
         >
           {children}
         </UserContext.Provider>
