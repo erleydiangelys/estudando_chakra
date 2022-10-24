@@ -32,9 +32,16 @@ export const UserDataContext = ({ children }) => {
     }
   }
 
+  function Userlogout() {
+    setLogin(false)
+    navigate('/login')
+  }
+
     return (
         <UserContext.Provider
-          value={{ login, setLogin, loading, error, Userlogin, itensCarrinho, setItensCarrinho, descCarrinho, setDescCarrinho }}
+          value={{ login, setLogin, loading, error,
+                   Userlogin, itensCarrinho, setItensCarrinho,
+                   descCarrinho, setDescCarrinho, Userlogout }}
         >
           {children}
         </UserContext.Provider>

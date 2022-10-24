@@ -14,6 +14,7 @@ import Materias from './Pages/materias/index';
 import Materia from './Components/materia/index';
 
 import { UserContext } from './Context/UserContext';
+import Perfil from './Pages/Perfil/index';
 
 
 export const Router = () => {
@@ -31,6 +32,7 @@ export const Router = () => {
       <Route path="noticias/:id" element={login ? <Noticia /> : <LoginForm/>} />
       <Route path="materias/" element={login ? <Materias /> : <LoginForm/>} />
       <Route path="materias/:id" element={login ? <Materia /> : <LoginForm/>} />
+      <Route path="perfil/" element={login ? <Perfil /> : <LoginForm/>} />
       <Route path="teste/" element={<Teste />} />
       <Route path="*" element={<NotFound />}/>
     </Routes>

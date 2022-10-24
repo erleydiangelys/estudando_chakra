@@ -29,7 +29,7 @@ import { ShoppingCartOutline } from '@styled-icons/evaicons-outline/ShoppingCart
 import { ColorModeSwitcher } from './../../styles/ColorModeSwitcher';
 
 export function Header() {
-  const { login, itensCarrinho, setItensCarrinho, descCarrinho, setDescCarrinho } = React.useContext(UserContext);
+  const { login, itensCarrinho, descCarrinho, Userlogout } = React.useContext(UserContext);
   const [itens, setItens] = React.useState(0)
   const [descItens, setDescItens] = React.useState([])
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -126,9 +126,8 @@ export function Header() {
                 />
               </MenuButton>
               <MenuList zIndex='999'>
-                <MenuItem>Perfil</MenuItem>
-                <MenuItem>Meus Dogs</MenuItem>
-                <MenuItem>Sair</MenuItem>
+              <ReactLink to='/perfil'><MenuItem>Perfil</MenuItem></ReactLink>
+                <MenuItem onClick={() => Userlogout()}>Sair</MenuItem>
               </MenuList>
             </Menu>
           </Flex>
