@@ -24,7 +24,7 @@ function Home() {
   return (
     <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
 
-      <Stack spacing='10px'>
+      <Stack spacing='10px' mb='10'>
 
 
     

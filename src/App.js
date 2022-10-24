@@ -9,6 +9,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from './styles/theme';
 import { Header } from './Components/Header';
 import Loading from './Components/Loading';
+import Footer from './Components/Footer';
 
 // import Cards from './Pages/Cards/index';
 
@@ -20,6 +21,7 @@ function App() {
           <UserDataContext>
             <Header />
             <Router />
+            <Footer />
           </UserDataContext>
         </BrowserRouter>
       </Suspense>
