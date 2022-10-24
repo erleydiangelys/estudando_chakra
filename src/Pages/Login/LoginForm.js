@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { Icon, ExternalLinkIcon } from '@chakra-ui/icons'
+import { Icon } from '@chakra-ui/icons'
+import { MotionFlex, animationFlex, itemAnimation, MotionBox, MotionStack } from '../../styles/animations';
+// import { MotionFlex, animationFlex, itemAnimation } from './styles/animation';
+
 import { Dog } from '@styled-icons/boxicons-solid/Dog'
 import { EyeClose } from '@styled-icons/remix-line/EyeClose'
 import { Eye } from '@styled-icons/remix-line/Eye'
@@ -31,7 +34,7 @@ function LoginForm() {
     return (
         <Container maxW='1200px' mt='10'>
             <Center>
-                <Flex display={{ md: 'flex' }} >
+                <MotionFlex display={{ md: 'flex' }} variants={animationFlex} initial="hidden" animate="visible">
 
                     <Box p='4' borderRadius='5' mr={{ md: 4 }} boxShadow='base'>
                         <Box>
@@ -46,12 +49,12 @@ function LoginForm() {
                             </Box>
                         </Center>
 
-                        <Box pt='4' mt='8'>
+                        <MotionBox pt='4' mt='8' variants={itemAnimation} initial="hidden" animate="visible">
                             {/* <Text size='md'>nome:</Text> */}
                             <Input variant='outline' borderRadius='5' placeholder='Nome de usuario' onChange={(e) => setName(e.target.value)}/>
-                        </Box>
+                        </MotionBox>
 
-                        <Box mt='8'>
+                        <MotionBox mt='8' variants={itemAnimation} initial="hidden" animate="visible">
                             {/* <Text size='md'>senha:</Text> */}
                             <InputGroup size='md'>
                                 <Input
@@ -66,11 +69,11 @@ function LoginForm() {
                                     </Button>
                                 </InputRightElement>
                             </InputGroup>
-                        </Box>
+                        </MotionBox>
                         
                         {error && <Text align='center' color='red' mt='2'>{error}</Text>}
 
-                        <Stack mt={{sm: 10, md: 10, lg: 20 }} spacing='20px'>
+                        <MotionStack mt={{sm: 10, md: 10, lg: 20 }} spacing='20px' variants={itemAnimation} initial="hidden" animate="visible">
                             <Button w={'full'} borderRadius='5' colorScheme='orange' onClick={handleSubmit}>
                                 <Center>
                                     {loading ? (<Spinner />) : (<Text>Login</Text>)}
@@ -89,7 +92,7 @@ function LoginForm() {
                                     <Text>Não tem conta? <Link href='/login/create'> crie aqui</Link></Text>
                                 </Center>
                             </Box>
-                        </Stack>
+                        </MotionStack>
 
 
                     </Box>
@@ -101,7 +104,7 @@ function LoginForm() {
 
                     </Box>
 
-                </Flex>
+                </MotionFlex>
             </Center>
         </Container>
     )

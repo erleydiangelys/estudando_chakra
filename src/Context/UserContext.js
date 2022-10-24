@@ -15,14 +15,20 @@ export const UserDataContext = ({ children }) => {
   function Userlogin(name, senha) {
     setLoading(true);
     if((name === 'adm') && (senha === '123')) {
-      setLogin(true)
-      setLoading(false)
-      navigate('/')
+      setTimeout(() => {
+        setLoading(false);
+        setLogin(true)
+        navigate('/')
+      }, 1500);
     }
     else {
+
       setError('usuario ou senha invalido')
-      setLoading(false)
-      setLogin(false)
+
+      setTimeout(() => {
+        setLoading(false);
+        setLogin(false)
+      }, 2000);
     }
   }
 
