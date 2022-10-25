@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as ReactLink } from "react-router-dom";
 
 import { Icon } from '@chakra-ui/icons'
 import { MotionFlex, animationFlex, itemAnimation, MotionBox, MotionStack } from '../../styles/animations';
@@ -9,7 +10,7 @@ import { EyeClose } from '@styled-icons/remix-line/EyeClose'
 import { Eye } from '@styled-icons/remix-line/Eye'
 import { FcGoogle } from 'react-icons/fc'
 
-import { Button, useMediaQuery, Spinner, useColorModeValue, Box, Link, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
+import { Button, useMediaQuery, Spinner, useColorModeValue, Box, Grid, Container, Image, Stack, Input, InputGroup, InputRightElement, Heading, Flex, Center, Text, Show } from '@chakra-ui/react'
 import { UserContext } from './../../Context/UserContext';
 
 const img = {
@@ -32,7 +33,7 @@ function LoginForm() {
    
 
     return (
-        <Container maxW='1200px' mt='10'>
+        <Container maxW='1200px' mt='5' mb='2'>
             <Center>
                 <MotionFlex display={{ md: 'flex' }} variants={animationFlex} initial="hidden" animate="visible">
 
@@ -89,7 +90,9 @@ function LoginForm() {
 
                             <Box>
                                 <Center>
-                                    <Text>Não tem conta? <Link href='/login/create'> crie aqui</Link></Text>
+                                    <Flex>
+                                        <Text>Não tem conta?</Text><ReactLink to='/login/create'><Text color='orange.500' ml='1'>Crie aqui</Text></ReactLink>
+                                    </Flex>
                                 </Center>
                             </Box>
                         </MotionStack>
