@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import Router from './router';
 import { UserDataContext } from './Context/UserContext';
 
@@ -19,7 +19,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <BrowserRouter>
           <UserDataContext>
-            <Header />
+            <Header/>
             <Router />
             <Footer />
           </UserDataContext>

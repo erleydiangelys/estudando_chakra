@@ -6,7 +6,7 @@ import {
     Text,
     useColorModeValue,
     VisuallyHidden,
-    Heading
+    Heading, 
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
   
@@ -40,7 +40,7 @@ import {
   
   export default function Footer() {
     return (
-      <Box >
+      <Box bg={useColorModeValue('gray.50', 'black')} bottom='0' w='100%'>
         <Container
           as={Stack}
           maxW={'6xl'}

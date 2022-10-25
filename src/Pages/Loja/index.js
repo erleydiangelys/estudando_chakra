@@ -9,7 +9,7 @@ const data = produtos.Produtos
 
 function Loja() {
   return (
-    <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
+    <Container maxW='1200px' mt={{ base: '20', sm: '20', md: '20' }} mb={{ base: '20', sm: '20', md: '20' }}>
 
     <Stack spacing='10px'>
 

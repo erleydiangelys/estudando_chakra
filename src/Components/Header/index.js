@@ -22,6 +22,7 @@ import {
   Center,
   Image,
   useToast,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { ShoppingCartOutline } from '@styled-icons/evaicons-outline/ShoppingCartOutline';
@@ -50,10 +51,12 @@ export function Header() {
     </ReactLink>
   );
 
+  const color = useColorModeValue('gray.50', 'black');
+
   return (
     <>
       {login && 
-      (<Box px={4}>
+      (<Box px={4} position='fixed' top='0' w='100%' zIndex='999' bg={color}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}

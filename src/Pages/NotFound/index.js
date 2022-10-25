@@ -15,7 +15,7 @@ const defaultOptions = {
 
 function NotFound() {
   return (
-    <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
+    <Container maxW='1200px' mt={{ base: '20', sm: '20', md: '20' }} mb={{ base: '20', sm: '20', md: '20' }}>
       <Heading mt='20vh' align='center' fontFamily='Montserrat'>Page Not found</Heading>
       <Box mt='2'>
         <Lottie options={defaultOptions}

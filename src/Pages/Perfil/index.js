@@ -6,7 +6,7 @@ import { MessageSquareEdit } from '@styled-icons/boxicons-regular/MessageSquareE
 
 function Perfil() {
     return (
-        <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
+        <Container maxW='1200px' mt={{ base: '20', sm: '20', md: '20' }} mb={{ base: '20', sm: '20', md: '20' }}>
             <Box align='center'  mt='10'>
                 <Box>
                     <Avatar size='2xl' bg='gray.500'>

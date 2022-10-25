@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link} from "react-router-dom";
 
-import { Flex, Heading, Image, Text, useColorModeValue, Box, Icon, Badge } from '@chakra-ui/react';
+import { Flex, Heading, Image, Text, useColorModeValue, Box, Icon } from '@chakra-ui/react';
 import { ReadingListAdd } from '@styled-icons/fluentui-system-regular/ReadingListAdd';
 
 import { customScrollbar } from './../../styles/utils';

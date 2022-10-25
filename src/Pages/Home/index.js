@@ -22,11 +22,9 @@ function Home() {
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
   const [isLargerThan320] = useMediaQuery('(min-width: 550px)')
   return (
-    <Container maxW='1200px' mt={{ base: '2', sm: '2', md: '5' }}>
+    <Container maxW='1200px' mt={{ base: '20', sm: '20', md: '20' }} mb={{ base: '20', sm: '20', md: '20' }}>
 
       <Stack spacing='10px' mb='10'>
-
-
     
       <Center>
           <Box w='100%'>   {/* parte da exposição */}
