@@ -1,3 +1,5 @@
+import React from 'react'
+import { UserContext } from '../../Context/UserContext';
 import {
     Box,
     chakra,
@@ -39,8 +41,13 @@ import {
   };
   
   export default function Footer() {
+    const { login } = React.useContext(UserContext);
+    const bgColor = useColorModeValue('gray.50', 'black')
+
     return (
-      <Box bg={useColorModeValue('gray.50', 'black')} bottom='0' w='100%'>
+      <>
+      {login && 
+      (<Box bg={bgColor} bottom='0' w='100%' >
         <Container
           as={Stack}
           maxW={'6xl'}
@@ -63,6 +70,8 @@ import {
             </SocialButton>
           </Stack>
         </Container>
-      </Box>
+      </Box>)
+  }
+  </>
     );
   }

@@ -3,7 +3,6 @@ import { Link as ReactLink } from "react-router-dom";
 
 import { Icon } from '@chakra-ui/icons'
 import { MotionFlex, animationFlex, itemAnimation, MotionBox, MotionStack } from '../../styles/animations';
-// import { MotionFlex, animationFlex, itemAnimation } from './styles/animation';
 
 import { Dog } from '@styled-icons/boxicons-solid/Dog'
 import { EyeClose } from '@styled-icons/remix-line/EyeClose'
@@ -33,7 +32,7 @@ function LoginForm() {
    
 
     return (
-        <Container maxW='1200px' mt='5' mb='2'>
+        <Container maxW='1200px' mt={{md: '5vh', lg: '10vh' }} mb='2'>
             <Center>
                 <MotionFlex display={{ md: 'flex' }} variants={animationFlex} initial="hidden" animate="visible">
 
